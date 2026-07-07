@@ -2,29 +2,24 @@ import React, { useState, useEffect } from 'react'
 import { BiLogoGithub, BiLogoLinkedin, BiMailSend } from 'react-icons/bi'
 
 const Home = () => {
-  // 1. Array of titles you want to cycle through
   const titles = [
     "Cyber Security Enthusiast",
     "Web Developer",
     "President University Student"
   ];
 
-  // 2. React states to manage which title is active and its visibility fade
+ 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFade, setIsFade] = useState(true);
 
   useEffect(() => {
-    // Set a recurring loop every 3 seconds
     const interval = setInterval(() => {
-      // Step A: Trigger the fade-out effect slightly before changing text
       setIsFade(false);
 
-      setTimeout(() => {
-        // Step B: Update index to the next title in the array (looping back to 0 at the end)
+      setTimeout(() => {        
         setCurrentIndex((prevIndex) => (prevIndex + 1) % titles.length);
-        // Step C: Trigger fade back in
         setIsFade(true);
-      }, 300); // 300ms matches the transition duration style below
+      }, 300); 
 
     }, 3000); 
 
@@ -43,7 +38,6 @@ const Home = () => {
             Farhan Donie Pratama
           </h1>
           
-          {/* 3. ANIMATED CONTAINER: Fixed height and transition properties control the fade */}
           <div className="h-8 md:h-10 lg:h-12 flex items-center justify-center">
             <h3 className={`bg-gradient-to-r from-rose-400 to-rose-600 bg-clip-text 
             text-xl font-semibold text-transparent md:text-2xl lg:text-3xl transition-all duration-300 transform

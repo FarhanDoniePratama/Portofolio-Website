@@ -12,7 +12,7 @@ function App() {
 
         <main className="flex-[3]">
           <Home />
-          <Skills /> {/* FIXED: Changed from <Experience /> to <Skills /> */}
+          <Skills /> 
           <Projects />
           <Contact />
         </main>

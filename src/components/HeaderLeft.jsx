@@ -29,13 +29,13 @@ const HeaderLeft = () => {
 
       </div>
 
-      {/* Mobile Navigation Bar */}
+      /* Mobile Navigation Bar */
       <div className='fixed left-0 right-0 top-0 z-10 flex justify-evenly bg-rose-600 p-5 text-white md:hidden'>
         <a href="#home" className='flex flex-col items-center justify-center'>
           <BiHome className='text-2xl' />
           <span className='text-xs'>Home</span>
         </a>
-        {/* UPDATED: Changed link, icon, and label to Skills */}
+        
         <a href="#skills" className='flex flex-col items-center justify-center'>
           <BiBarChartAlt2 className='text-2xl' />
           <span className='text-xs'>Skills</span>
