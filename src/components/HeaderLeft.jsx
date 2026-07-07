@@ -1,5 +1,5 @@
 import React from 'react'
-import { BiBriefcase, BiCode, BiHome, BiMailSend, BiRightArrowAlt } from 'react-icons/bi'
+import { BiBarChartAlt2, BiCode, BiHome, BiMailSend, BiRightArrowAlt } from 'react-icons/bi' // Updated BiBriefcase to BiBarChartAlt2
 
 const HeaderLeft = () => {
   return (
@@ -9,8 +9,8 @@ const HeaderLeft = () => {
       <div className='min-h-screen top-0 hidden md:sticky md:flex flex-col items-center justify-center bg-rose-600 text-white p-4'>
         
         <ul className='flex flex-col gap-10'>
-          {/* FIXED: Changed 'project' to 'projects' to match mobile nav and section IDs */}
-          {["home", 'experience', 'projects', 'contact'].map((item) => (
+          {/* UPDATED: Changed 'experience' to 'skills' */}
+          {["home", 'skills', 'projects', 'contact'].map((item) => (
             <li 
               key={item} 
               className='flex items-center justify-start cursor-pointer font-medium transition-all duration-200 group sm:text-lg md:text-xl xl:text-3xl'
@@ -30,15 +30,15 @@ const HeaderLeft = () => {
       </div>
 
       {/* Mobile Navigation Bar */}
-      {/* UPDATED: Changed bg-teal-600 to bg-rose-600 to match the desktop color scheme */}
       <div className='fixed left-0 right-0 top-0 z-10 flex justify-evenly bg-rose-600 p-5 text-white md:hidden'>
         <a href="#home" className='flex flex-col items-center justify-center'>
           <BiHome className='text-2xl' />
           <span className='text-xs'>Home</span>
         </a>
-        <a href="#experience" className='flex flex-col items-center justify-center'>
-          <BiBriefcase className='text-2xl' />
-          <span className='text-xs'>Experience</span>
+        {/* UPDATED: Changed link, icon, and label to Skills */}
+        <a href="#skills" className='flex flex-col items-center justify-center'>
+          <BiBarChartAlt2 className='text-2xl' />
+          <span className='text-xs'>Skills</span>
         </a>
         <a href="#projects" className='flex flex-col items-center justify-center'>
           <BiCode className='text-2xl' />
