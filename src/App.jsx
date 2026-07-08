@@ -7,12 +7,10 @@ import Contact from './components/Contact';
 function App() {
   return (
     <>
-      
-      <div className="flex min-h-screen w-full max-w-full subpixel-antialiased overflow-x-hidden">
+      <div className="flex min-h-screen w-full subpixel-antialiased">
         <HeaderLeft />
 
-       
-        <main className="flex-[3] w-full max-w-full overflow-x-hidden">
+        <main className="flex-[3]">
           <Home />
           <Skills /> 
           <Projects />
